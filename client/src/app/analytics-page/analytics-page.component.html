@@ -1,0 +1,21 @@
+<div class="page-title">
+  <h4>ניתוח</h4>
+</div>
+
+<div [style.display]="pending ? 'none' : 'block'">
+  <div class="average-price">
+    <p>בדיקה ממוצעת <strong>{{average}} р.</strong></p>
+  </div>
+
+  <div class="analytics-block pb3">
+    <h5>הַכנָסָה</h5>
+    <canvas #gain></canvas>
+  </div>
+
+  <div class="analytics-block">
+    <h5>הזמנות</h5>
+    <canvas #order></canvas>
+  </div>
+</div>
+
+<app-loader *ngIf="pending"></app-loader>
